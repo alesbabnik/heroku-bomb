@@ -1,0 +1,137 @@
+@font-face {
+  font-family: Quicksand;
+  src: url(/font/Quicksand-VariableFont_wght.ttf);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBelow {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: Quicksand;
+  font-size: 16px;
+  color: #333;
+  background-color: rgb(255, 255, 255);
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    flex-flow: row wrap;
+  }
+  
+  .contentcontainer {
+    border-radius: 15px;
+    text-align: center;
+    border: 5px rgb(90, 90, 90);
+    background-color: rgba(0, 0, 0, 0.822);
+    color: rgb(209, 209, 209);
+    padding: 10px;
+    width: 640px;
+    transition: all 5s ease-in-out;
+  }
+
+  .post {
+    border: #fff 1px solid;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+  }
+
+  .postbody {
+    animation: none;
+    padding: 10px;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+  }
+
+  .name {
+    float: left;
+    margin: -5px;
+  }
+
+  .message {
+    text-align: left;
+  }
+
+  .date {
+    float: right;
+    font-size: 12px;
+  }
+
+  img {
+    width: 800px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  span {
+    font-size: 12px;
+    float: left;
+  }
+
+  input {
+    font-family: Quicksand;
+    width: 250px;
+    height: fit-content;
+    border: #fff 1px solid;
+    border-radius: 15px;
+    padding: 10px;
+    resize: none;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+  }
+
+  textarea {
+    font-family: Quicksand;
+    width: 250px;
+    height: fit-content;
+    border: #fff 1px solid;
+    border-radius: 15px;
+    padding: 10px;
+    resize: none;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+  }
+
+  table {
+    width: 95%;
+  }
+
+  button {
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: dodgerblue;
+  }
+
+  a {
+    color: dodgerblue;
+    font-size: 16px;
+  }

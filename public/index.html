@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Heroku</title>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>test</h1>
+    <div class="maincontainer">
+        <hr style="border-style: none; width: 100%; height:25vh;" />
+        <div class="contentcontainer">
+            <h1 id="countdown">Loading...</h1>
+        </div>
+        <hr style="border-style: none; width: 100%; height:0vh;" />
+        <div id="destroy">
+            <p>Showing that it is using the dev branch and not main branch.
+             Here is the <a href="https://github.com/alesbabnik/heroku-bomb">Github repository</a>
+            </p>
+            <hr style="border-style: none; width: 100%; height:0vh;" />
+            <img src="https://media.discordapp.net/attachments/954727965730672650/956949344035143690/unknown.png?width=853&height=368" alt="">
+        </div>
+    </div>
 </body>
+<script>
+    var countDownDate = new Date("Nov 3, 2022 00:00:00").getTime();
+
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var timeleft = countDownDate - now;
+        var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = 
+        days + " DAYS " +
+        hours + " HOURS <br>" +
+        minutes + " MINUTES " +
+        seconds + " SECONDS " +
+        "<br>UNTIL THIS SITE SELF-DESTRUCTS";
+
+        document.title = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+        if (timeleft < 0) {
+            clearInterval(x);
+            document.getElementById("destroy").innerHTML = "";
+            document.getElementById("countdown").innerHTML = "THIS SITE HAS SELF-DESTRUCTED";
+            document.title = ":^(";
+        }
+
+    }, 1000);
+</script>
 </html>
